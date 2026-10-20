@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Резюме Михаила — аналитика данных с опытом работы с SQL, Excel и банковскими данными.">
+  <title>Михаил — Data Analyst</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --text: #202124;
+      --muted: #5f6368;
+      --line: #e5e7eb;
+      --accent: #2457c5;
+      --paper: #ffffff;
+      --background: #f5f6f8;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      width: min(100% - 32px, 850px);
+      margin: 40px auto;
+      padding: 52px 60px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      box-shadow: 0 8px 28px rgba(20, 30, 50, 0.04);
+    }
+
+    header {
+      padding-bottom: 26px;
+      border-bottom: 2px solid var(--text);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 2.65rem);
+      line-height: 1.15;
+      letter-spacing: -0.04em;
+      font-weight: 750;
+    }
+
+    .role {
+      margin: 10px 0 14px;
+      color: var(--accent);
+      font-size: 1.1rem;
+      font-weight: 650;
+    }
+
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 18px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      overflow-wrap: anywhere;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    section { margin-top: 27px; }
+
+    h2 {
+      margin: 0 0 13px;
+      padding-bottom: 7px;
+      border-bottom: 1px solid var(--line);
+      font-size: 1.05rem;
+      line-height: 1.4;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    p { margin: 7px 0 0; }
+
+    .meta {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .entry + .entry { margin-top: 17px; }
+
+    ul {
+      margin: 8px 0 0;
+      padding-left: 21px;
+    }
+
+    li { margin: 4px 0; padding-left: 2px; }
+
+    .skills {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 9px 18px;
+    }
+
+    .skill-label { font-weight: 650; }
+    .skill-value { color: #3f4348; }
+
+    .summary { max-width: 690px; }
+
+    .actions {
+      display: flex;
+      justify-content: center;
+      margin: 0 auto 24px;
+    }
+
+    .print-button {
+      padding: 10px 16px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      background: #fff;
+      color: var(--text);
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .print-button:hover { background: #f0f2f5; }
+
+    footer {
+      margin-top: 30px;
+      padding-top: 15px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    @media (max-width: 600px) {
+      .page {
+        width: 100%;
+        margin: 0;
+        padding: 30px 22px;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+      }
+      .skills { grid-template-columns: 1fr; gap: 2px; }
+      .skill-value { margin-bottom: 9px; }
+    }
+
+    @media print {
+      @page { size: A4; margin: 15mm 16mm; }
+      body { background: #fff; font-size: 10.5pt; line-height: 1.45; }
+      .page {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+      }
+      .actions { display: none; }
+      section { margin-top: 18px; }
+      header { padding-bottom: 18px; }
+      h2 { margin-bottom: 9px; }
+      a { color: inherit; text-decoration: none; }
+      .entry, li { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="actions">
+    <button class="print-button" type="button" onclick="window.print()">Печать / Сохранить в PDF</button>
+  </div>
+
+  <main class="page">
+    <header>
+      <!-- Замените «Михаил» на полное имя, если хотите указывать его в резюме. -->
+      <h1>Михаил</h1>
+      <div class="role">Data Analyst · SQL · Python</div>
+      <div class="contact">
+        <span>GitHub: <a href="https://github.com/MishaDeus">github.com/MishaDeus</a></span>
+        <!-- При желании добавьте контакты: email, LinkedIn или Telegram. -->
+      </div>
+    </header>
+
+    <section>
+      <h2>Профиль</h2>
+      <p class="summary">
+        Выпускник магистратуры по прикладной математике и информатике с опытом
+        работы с банковскими данными, SQL-запросами и финансовыми расчётами в Excel.
+        Владею Python и инструментами анализа данных. Интересуюсь аналитикой данных
+        и бизнес-анализом; также имею исследовательский опыт в машинном обучении.
+      </p>
+    </section>
+
+    <section>
+      <h2>Опыт</h2>
+      <div class="entry">
+        <h3>Практикант — Азиатско-Тихоокеанский банк</h3>
+        <ul>
+          <li>Работал с финансовыми формулами и расчётами в Excel.</li>
+          <li>Писал SQL-запросы для формирования и обработки банковских данных.</li>
+          <li>Помогал поддерживать расчёт риск-показателей в соответствии с требованиями Банка России.</li>
+          <li>Участвовал в обработке данных для рабочих задач.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Технические навыки</h2>
+      <div class="skills">
+        <div class="skill-label">Анализ данных</div>
+        <div class="skill-value">SQL, Excel, pandas, NumPy</div>
+
+        <div class="skill-label">Программирование</div>
+        <div class="skill-value">Python, MATLAB</div>
+
+        <div class="skill-label">Базы данных</div>
+        <div class="skill-value">PostgreSQL</div>
+
+        <div class="skill-label">Машинное обучение</div>
+        <div class="skill-value">CNN, TensorFlow, Keras, основы NLP</div>
+
+        <div class="skill-label">Инструменты</div>
+        <div class="skill-value">Jupyter Notebook, Git, Linux/WSL</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Образование</h2>
+      <div class="entry">
+        <h3>Магистр прикладной математики и информатики — с отличием</h3>
+        <div class="meta">Амурский государственный университет · Благовещенск, Россия · 2025</div>
+        <p>
+          Тема диссертации: «Разработка и обучение нейронной сети для анализа
+          рентгеновских снимков лёгких с использованием интерфейса чат-бота».
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Исследования и проекты</h2>
+      <div class="entry">
+        <h3>Классификация медицинских изображений с помощью CNN</h3>
+        <ul>
+          <li>Разработал свёрточную нейронную сеть для классификации медицинских изображений в рамках магистерской диссертации.</li>
+          <li>Опубликовал 4 научные статьи по теме исследования и выступал на конференциях.</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <h3>MTS Engineer Hack — Kubernetes</h3>
+        <p>Разработал небольшой проект для развёртывания и тестирования одноузлового окружения Kubernetes в рамках хакатона.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Дополнительное обучение</h2>
+      <p>Участник онлайн-секции летней школы машинного обучения SMILES от Сколтеха.</p>
+    </section>
+
+    <section>
+      <h2>Языки</h2>
+      <p>Русский — родной · Английский — B2</p>
+    </section>
+
+    <footer>
+      Обновлено в 2026 году
+    </footer>
+  </main>
+</body>
+</html>
